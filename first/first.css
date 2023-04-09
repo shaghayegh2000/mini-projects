@@ -90,7 +90,7 @@ body {
         -o-transform: rotate(360deg);
 }
 }
-.container-grow {
+.grow {
     animation: grow 4s linear forwards;
     -webkit-animation: grow 4s linear forwards;
 }
@@ -110,9 +110,9 @@ body {
         -o-transform: scale(1.2);
 }
 }
-.container-shrink {
-    animation: grow 4s linear forwards;
-    -webkit-animation: grow 4s linear forwards;
+.shrink {
+    animation: shrink 4s linear forwards;
+    -webkit-animation: shrink 4s linear forwards;
 }
 @keyframes shrink {
     from {
