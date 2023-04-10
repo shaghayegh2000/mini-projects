@@ -4,7 +4,7 @@
     padding: 0;
 }
 body {
-    background: #224941 url("imgs/4707526.jpg") no-repeat center center/cover;
+    background: #224941 url("../imgs/4707526.jpg") no-repeat center center/cover;
     color: white;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     min-height: 100vh;
