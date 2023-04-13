@@ -3,12 +3,15 @@ var hours = document.getElementById("hours");
 var minutes = document.getElementById("minutes");
 var seconds = document.getElementById("seconds");
 var countdown = document.getElementById("countdown");
+var spinner = document.getElementById("spinner");
+var year = document.getElementById("year");
 
 var currentYear = new Date().getFullYear();
-var newYearTime = new Date("March 21 (currentYear + 1) 00:00:00 GMT+0330");
-var currentTime = new Date();
+year.innerText = currentYear+1;
+var newYearTime = new Date((currentYear + 1), 2, 21, 0, 0, 0);
 
 var updateConutdown = () => {
+    var currentTime = new Date();
     var diff = newYearTime - currentTime ;
     var d = Math.floor(diff/1000/60/60/24);
     var h = Math.floor(diff/1000/60/60)%24;
@@ -19,8 +22,11 @@ var updateConutdown = () => {
     minutes.innerHTML = m < 10 ? "0" + m : m;
     seconds.innerHTML = s < 10 ? "0" + s : s;
 }
+setTimeout(() => {
+    spinner.remove();
+    countdown.style.display = "flex";
+}, 2000);
 setInterval(updateConutdown , 1000);
-document.write(newYearTime + '<br>');
-document.write(currentTime);
+
 
 

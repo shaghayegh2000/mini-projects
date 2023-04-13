@@ -7,7 +7,7 @@ body {
     background: url("../imgs/perori-00.jpg") no-repeat center center;
     background-size: cover;
     height: 100vh;
-    color: rgb(92, 52, 52);
+    color: rgb(114, 66, 66);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,13 +34,13 @@ h1 {
     letter-spacing: 3px;
 }
 .countdown {
-    display: flex;
+    display: none;
     transform: scale(1.5);
     -webkit-transform: scale(1.5);
     -moz-transform: scale(1.5);
     -ms-transform: scale(1.5);
     -o-transform: scale(1.5);
-    margin-top: 30px;
+    margin-bottom: 50px;
 }
 .time {
     display: flex;
@@ -58,7 +58,7 @@ h1 {
 } */
 
 .spinner {
-    height: 25vw;
+    height: 10vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -85,4 +85,11 @@ h1 {
         -ms-transform: rotate(360deg);
         -o-transform: rotate(360deg);
 }
+}
+.year {
+    font-size: 150px;
+    opacity: .2;
+    position: absolute;
+    bottom: 70px;
+    letter-spacing: 20px;
 }
