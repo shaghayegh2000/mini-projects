@@ -6,35 +6,34 @@
 body {
     font-family: Verdana, sans-serif;
 }
-.mySlides {
-    display: none;
-}
-img {
-    vertical-align: middle;
-}
 
 .slideshow-container {
-  max-width: 1000px;
+  max-width: 1200px;
   position: relative;
   margin: auto;
+  text-align: center;
 }
 
 .text {
   color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
+  background: rgba(8, 19, 27, 0.5);
+  z-index: 1;
+  font-size: 20px;
+  padding: 8px 3px;
   position: absolute;
   bottom: 8px;
-  width: 100%;
+  width: 80%;
+  left: 10%;
   text-align: center;
 }
 
 .numbertext {
   color: #f2f2f2;
-  font-size: 12px;
+  font-size: 15px;
   padding: 8px 12px;
   position: absolute;
   top: 0;
+  left: 10%;
 }
 
 .dot {
@@ -45,15 +44,19 @@ img {
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
+  -webkit-transition: background-color 0.6s ease;
+  -moz-transition: background-color 0.6s ease;
+  -ms-transition: background-color 0.6s ease;
+  -o-transition: background-color 0.6s ease;
 }
 
 .active {
-  background-color: #717171;
+  background-color: #616161;
 }
 
 .fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
+  animation: fade 1.5s linear;
+  -webkit-animation: fade 1.5s linear;
 }
 
 @keyframes fade {
