@@ -9,18 +9,17 @@ body {
 .mySlides {
     display: none;
 }
-
-.slideshow-container {
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
-    max-width: 1000px;
-    position: relative;
-    margin: auto;
+img {
+    vertical-align: middle;
 }
 
-/* .text {
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.text {
   color: #f2f2f2;
   font-size: 15px;
   padding: 8px 12px;
@@ -28,7 +27,7 @@ body {
   bottom: 8px;
   width: 100%;
   text-align: center;
-} */
+}
 
 .numbertext {
   color: #f2f2f2;
@@ -55,10 +54,6 @@ body {
 .fade {
   animation-name: fade;
   animation-duration: 1.5s;
-}
-
-.Dots {
-    text-align:center
 }
 
 @keyframes fade {
