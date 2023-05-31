@@ -1,0 +1,12 @@
+.button {
+    background-color: rgb(213, 73, 162);
+    margin-top: 15px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    top: 15px;
+}
