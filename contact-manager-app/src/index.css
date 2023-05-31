@@ -29,9 +29,31 @@ input {
 .input-group-text {
   border: none;
 }
-
-@media (min-width : 760px) {
-  h2 {
-    top: 6px;
-  }
+button , span {
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  overflow: hidden;
+}
+div.buts span:hover {
+  transform: translate(-1px , -1px);
+  -webkit-transform: translate(-1px , -1px);
+  -moz-transform: translate(-1px , -1px);
+  -ms-transform: translate(-1px , -1px);
+  -o-transform: translate(-1px , -1px);
+  box-shadow: 1.5px 1.5px 2px gray;
+}
+div.buts span:active {
+  transform: translate(1px , 1px);
+  -webkit-transform: translate(1px , 1px);
+  -moz-transform: translate(1px , 1px);
+  -ms-transform: translate(1px , 1px);
+  -o-transform: translate(1px , 1px);
+  box-shadow: none;
+}
+.card {
+  border: 1.5px solid rgb(163, 65, 163);
+  background-color: #3d3f4b;
 }

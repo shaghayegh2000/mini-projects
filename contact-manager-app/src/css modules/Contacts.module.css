@@ -1,6 +1,5 @@
-.button {
+.createContact {
     background-color: rgb(213, 73, 162);
-    margin-top: 15px;
     border-radius: 4px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -8,5 +7,17 @@
     -o-border-radius: 4px;
     overflow: hidden;
     position: relative;
-    top: 15px;
+    top: 20px;
+}
+.orange {
+    background-color: orange;
+    margin: -2px 0 15px 0;
+}
+.blue {
+    background-color: blue;
+    margin: -3px 0 7px 0;
+}
+.red {
+    background-color: red;
+    margin-top: 5px;
 }
