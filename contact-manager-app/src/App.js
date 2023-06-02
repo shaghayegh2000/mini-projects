@@ -5,11 +5,12 @@ import Contacts from './components/contact/Contacts';
 
 const App = () => {
 
-  const [contacts , setContact] = useState([]);
+  const [getContacts , setContact] = useState([]);
+  
   return (
     <div className="App">
       <Navbar/>
-      <Contacts/>
+      <Contacts contacts={getContacts}/>
     </div>
   );
 }

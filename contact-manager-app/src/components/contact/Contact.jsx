@@ -7,7 +7,7 @@ const contact = () => {
             <div className="card-body">
                 <div className=" row align-items-center d-flex justify-content-around">
                     <div className="col-md-4 col-sm-4">
-                        <img className="img-fluid rounded" src="https://via.placeholder.com/200" alt="image" />
+                        <img className="img-fluid rounded" src="https://via.placeholder.com/200" alt="" />
                     </div>
                     <div className="clo-md-7 col-sm-7">
                         <ul className="list-group">

@@ -1,8 +1,9 @@
 import {Fragment} from "react";
 import styles from '../../css modules/Contacts.module.css';
-import Contact from './Contact'
+import Contact from './Contact';
+import NotFound from '../../assets/no-found.gif';
 
-const Contacts = () => {
+const Contacts = ({contacts}) => {
     return (
         <Fragment>
             <section className="container">
@@ -23,7 +24,19 @@ const Contacts = () => {
             </section>
             <section className="container">   
             <div className="row">
-                <Contact/>
+                {
+                    contacts.length > 0 ? Contacts.map((c) => (
+                    <Contact key={c.id} Contact={c}/>
+                    )) : 
+                    (
+                        <div className="text-center py-5">
+                            <p className="h3">
+                                Contact not found!
+                            </p>
+                            <img src={NotFound} alt="not found" className="w-25" />
+                        </div>
+                    )
+                }
             </div>
             </section>
         </Fragment>
