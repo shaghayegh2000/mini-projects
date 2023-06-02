@@ -2,8 +2,9 @@ import {Fragment} from "react";
 import styles from '../../css modules/Contacts.module.css';
 import Contact from './Contact';
 import NotFound from '../../assets/no-found.gif';
+import Spinner from "../Spinner ";
 
-const Contacts = ({contacts}) => {
+const Contacts = ({contacts , loading}) => {
     return (
         <Fragment>
             <section className="container">
@@ -22,7 +23,9 @@ const Contacts = ({contacts}) => {
                     </div>
                 </div>
             </section>
-            <section className="container">   
+            {
+                loading ? <Spinner/> : (
+                    <section className="container">   
             <div className="row">
                 {
                     contacts.length > 0 ? Contacts.map((c) => (
@@ -39,6 +42,8 @@ const Contacts = ({contacts}) => {
                 }
             </div>
             </section>
+                )
+            }
         </Fragment>
     )
 }
