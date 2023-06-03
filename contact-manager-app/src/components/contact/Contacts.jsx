@@ -32,12 +32,14 @@ const Contacts = ({contacts , loading}) => {
                     <Contact key={c.id} Contact={c}/>
                     )) : 
                     (
-                        <div className="text-center py-5">
-                            <p className="h3">
-                                Contact not found!
-                            </p>
-                            <img src={NotFound} alt="not found" className="w-25" />
-                        </div>
+                        <span className={styles.backGround}>
+                            <div className="text-center py-5">
+                                <p className="h3">
+                                    Contact not found!
+                                </p>
+                                <img src={NotFound} alt="not found" className="w-25" />
+                            </div>
+                        </span>
                     )
                 }
             </div>
