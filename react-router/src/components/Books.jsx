@@ -1,11 +1,11 @@
 import {getBooks} from "../data/data";
-import { Link } from "react-router-dom";
+import { Link , Outlet } from "react-router-dom";
 
 const Books = () => {
     const books = getBooks();
   
     return (
-      <div className="rounded py-4 flex-column w-25 mt-3 d-flex mx-5 bg-info bg-opacity-25">
+      <div className="d-flex rounded py-4 w-75 mt-3 mx-auto bg-info bg-opacity-25">
         <nav className="d-flex flex-column">
           <input className="mb-4 mx-5" type="text" placeholder="Search Book" />
           {books.map((book) => (
@@ -18,6 +18,7 @@ const Books = () => {
             </Link>
           ))}
         </nav>
+        <Outlet/>
       </div>
     );
   };

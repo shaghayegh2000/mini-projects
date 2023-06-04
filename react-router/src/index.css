@@ -8,4 +8,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+@font-face {
+  font-family: 'Vazir';
+  src: url('../public/fonts/fontawesome-webfont.eot');
+  src: url('../public/fonts/fontawesome-webfont.svg') format('embedded-opentype'),
+      url('../public/fonts/fontawesome-webfont.ttf') format('woff2'),
+      url('../public/fonts/fontawesome-webfont.woff') format('woff'),
+      url('../public/fonts/fontawesome-webfont.woff2') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 

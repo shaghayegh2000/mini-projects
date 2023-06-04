@@ -5,10 +5,10 @@ const App = () => {
   
   return (
     <div className="App">
-      <h2>My ReactProject</h2>
-      <nav className='mt-4' style={{borderBottom: 'solid 1px black' , paddingBottom: '4vh'}}>
+      <h2 className='mt-4'>My ReactProject</h2>
+      <nav style={{borderBottom: 'solid 1px black' , paddingBottom: '4vh'}}>
         <Link to="/books">
-          My Books
+          My Books 
         </Link>
         {" "}
         <Link to="/about">
