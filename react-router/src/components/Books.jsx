@@ -1,4 +1,4 @@
-import getBooks from "../data/data";
+import {getBooks} from "../data/data";
 import { Link } from "react-router-dom";
 
 const Books = () => {

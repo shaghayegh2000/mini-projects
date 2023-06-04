@@ -61,9 +61,14 @@ const books = [
       },
   ];
   
-const getBooks = () => {
+export const getBooks = () => {
     return books;
   };
 
-  export default getBooks;
+export const getBook = (number) => {
+    return books.find(book => book.number === number)
+  };
+
+// export default getBook;
+
   
