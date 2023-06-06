@@ -1,4 +1,4 @@
-export const OurlocalQoutes = [
+const OurlocalQoutes = [
     {
       "text": "Genius is one percent inspiration and ninety-nine percent perspiration.",
       "author": "Thomas Edison"
@@ -6572,3 +6572,5 @@ export const OurlocalQoutes = [
       "author": "Tom Jackson"
     }
   ]
+
+  // export default OurlocalQoutes;
