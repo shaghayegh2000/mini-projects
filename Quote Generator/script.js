@@ -9,11 +9,30 @@ const newQuoteBtn = document.getElementById('new-quote');
 
 function newQuote() {
     const quote = OurlocalQoutes[Math.floor(Math.random()*OurlocalQoutes.length)];
-    authorText.textContent = quote.author;
+    
+    if (!quote.author) {
+        authorText.textContent = "Unknown"
+    }else {
+        authorText.textContent = quote.author;
+    }
+    
+    if (quote.text.length>120) {
+        qoteText.classList.add('long-quote');
+    }else {
+        qoteText.classList.remove('long-quote');
+    }
+    
     qoteText.textContent = quote.text;    
 }
 newQuote();
 
+function tweeyQuote() {
+    const twitterUrl = `https://twitter.com/intent/tweet?text=${qoteText.textContent} ${authorText.textContent};`
+    window.open(twitterUrl, '_blank')
+}
+
+newQuoteBtn.addEventListener('click' , newQuote);
+twitterBtn.addEventListener('click' , tweeyQuote)
 
 // async function getQuotes() {
 //     const apiUrl = 'https://type.fit/api/quotes';
