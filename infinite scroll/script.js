@@ -3,7 +3,6 @@ const loader = document.getElementById('loader');
 let photoArray = [];
 const img = document.createElement('img');
 
-
 const count = 10;
 const apiKey = 'API_KEY';
 const apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey}&count=${count}`;
@@ -16,7 +15,9 @@ function displayPhoto() {
         img.setAttribute('src' , photo.urls.regular);
         img.setAttribute('alt' , photo.alt_description);
         img.setAttribute('title' , photo.alt_description);
-        
+
+        item.appendChild(img);
+        imageContainer.appendChild(item);
     })
 }
 
