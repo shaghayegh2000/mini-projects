@@ -16,4 +16,20 @@ function test() {
         ssml: false
     });
 }
-test()
+
+async function getJoke() {
+    let joke = '';
+    const apiUrl = 'https://v2.jokeapi.dev/joke/Programming?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&idRange=0-200';
+    try {
+        const response = await fetch(apiUrl);
+        const data = await response.json();
+        if (data.setup) {
+            joke = `${data.setup} ... ${data.delivery}`;
+        }else {
+            joke = data.joke;
+        }
+    } catch (error) {
+        console.log('error')
+    }
+}
+getJoke();
