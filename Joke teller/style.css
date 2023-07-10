@@ -13,6 +13,65 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: url('robot.gif');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+button {
+    cursor: pointer;
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    background-color: rgb(254, 45, 129);
+    color: white;
+    border: none;
+    box-shadow: 1px 1px 3px 2px black;
+}
+button:hover {
+    transform: translate(-1px , -1px);
+    -webkit-transform: translate(-1px , -1px);
+    -moz-transform: translate(-1px , -1px);
+    -ms-transform: translate(-1px , -1px);
+    -o-transform: translate(-1px , -1px);
+    filter: contrast(2);
+    -webkit-filter: contrast(2);
+}
+button:active {
+    transform: translate(1px , 1px);
+    -webkit-transform: translate(1px , 1px);
+    -moz-transform: translate(1px , 1px);
+    -ms-transform: translate(1px , 1px);
+    -o-transform: translate(1px , 1px);
+    box-shadow: none;
+    filter: none;
+    -webkit-filter: none;
 }
 
-
+/* Media queries */
+@media screen and (max-width : 700px) {
+    .container {
+        background-size: cover;
+        background-position: center;
+        justify-content: space-between;
+    }
+    button {
+        margin-top: 50px;
+    }
+}
+@media screen and (max-width : 1000px) {
+    .container {
+        justify-content: space-between;
+        background-position: center;
+    }
+    button {
+        margin-top: 50px;
+    }
+    audio {
+        margin-bottom: 30px;
+    }
+}
