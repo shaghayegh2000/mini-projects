@@ -1,37 +1,55 @@
+@import "test";
+
 $color-primary : rgb(254, 165, 0);
-$color-secondary : rgb(85, 84, 84);
+$color-secondary : rgb(66, 66, 66);
 $color-tertiary : rgb(65, 105, 225);
 
 $font-size-lg : 40px;
 $font-size-md : 30px;
 $font-size-sm : 20px;
 
+@function doubleFont($fontSize : 10px) {
+    @return $fontSize * 2;
+}
+
 @mixin headingStyle($fontSize : $font-size-sm) {
     color: $color-secondary;
     text-align: center;
     font-size: $fontSize;
 }
-@mixin section(){
+
+@mixin section() {
     text-align: justify;
     margin: auto;
 }
-@mixin transition($paras...){
+
+@mixin transition($paras...) {
     transition: $paras;
     -webkit-transition: $paras;
     -moz-transition: $paras;
     -ms-transition: $paras;
     -o-transition: $paras;
 }
+
 .navbar {
-    background-color: $color-primary;
+    // background-color: $color-primary;
+    // background-color: lighten($color: $color-primary, $amount: 30%);
+    background-color: darken($color: $color-primary, $amount: 10%);
+    // background-color: transparentize($color: $color-primary, $amount: .8);
+    // background-color: mix($color-primary, $color-tertiary, $weight: 0.9);    
+
+
     ul {
         height: 100px;
-        li{
+
+        li {
             list-style-type: none;
-            a{
+
+            a {
                 text-decoration: none;
                 color: $color-secondary;
                 font-size: $font-size-sm;
+
                 &:hover {
                     color: $color-tertiary;
                 }
@@ -39,33 +57,51 @@ $font-size-sm : 20px;
         }
     }
 }
-h2 {
-    @include headingStyle($font-size-sm);
+
+%heding {
+    color: $color-primary;
+    background-color: $color-tertiary;
+    font-size: $font-size-lg;
+    text-align: center;
 }
+
+h2 {
+    // @include headingStyle($font-size-sm);
+    @extend %heding;
+
+    &:hover {
+        background-color: green;
+    }
+}
+
 h3 {
     @include headingStyle($font-size-md);
+    @extend %heding;
 }
+
 section {
     @include section();
 }
+
 footer {
     @include section();
-    h3{
-    &:hover {
-        color: $color-tertiary;
-        background-color: $color-primary;
-        cursor: pointer;
-        border-radius: 5px;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        -ms-border-radius: 5px;
-        -o-border-radius: 5px;
 
-        @include transition(color 1.5s , background-color 2s)
-}}
+    h3 {
+        &:hover {
+            color: $color-tertiary;
+            background-color: $color-primary;
+            cursor: pointer;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -o-border-radius: 5px;
+
+            @include transition(color 1.5s, background-color 2s);
+        }
+    }
 }
 
-
-
-
-
+p {
+    font-size: doubleFont();
+}
