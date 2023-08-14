@@ -1,0 +1,38 @@
+$color-primary : orange;
+$color-secondary : rgb(85, 84, 84);
+$color-tertiary : royalblue;
+
+$font-size-lg : 40px;
+$font-size-md : 30px;
+$font-size-sm : 20px;
+
+.navbar {
+    background-color: $color-primary;
+    ul {
+        height: 100px;
+        li{
+            list-style-type: none;
+            a{
+                text-decoration: none;
+                color: $color-secondary;
+                font-size: $font-size-sm;
+                &:hover {
+                    color: $color-tertiary;
+                }
+            }
+        }
+    }
+}
+h2 {
+    color: $color-secondary;
+    font-size: $font-size-lg;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
