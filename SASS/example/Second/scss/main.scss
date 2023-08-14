@@ -1,11 +1,27 @@
-$color-primary : orange;
+$color-primary : rgb(254, 165, 0);
 $color-secondary : rgb(85, 84, 84);
-$color-tertiary : royalblue;
+$color-tertiary : rgb(65, 105, 225);
 
 $font-size-lg : 40px;
 $font-size-md : 30px;
 $font-size-sm : 20px;
 
+@mixin headingStyle($fontSize : $font-size-sm) {
+    color: $color-secondary;
+    text-align: center;
+    font-size: $fontSize;
+}
+@mixin section(){
+    text-align: justify;
+    margin: auto;
+}
+@mixin transition($paras...){
+    transition: $paras;
+    -webkit-transition: $paras;
+    -moz-transition: $paras;
+    -ms-transition: $paras;
+    -o-transition: $paras;
+}
 .navbar {
     background-color: $color-primary;
     ul {
@@ -24,13 +40,30 @@ $font-size-sm : 20px;
     }
 }
 h2 {
-    color: $color-secondary;
-    font-size: $font-size-lg;
-    text-align: center;
+    @include headingStyle($font-size-sm);
 }
+h3 {
+    @include headingStyle($font-size-md);
+}
+section {
+    @include section();
+}
+footer {
+    @include section();
+    h3{
+    &:hover {
+        color: $color-tertiary;
+        background-color: $color-primary;
+        cursor: pointer;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
 
-
-
+        @include transition(color 1.5s , background-color 2s)
+}}
+}
 
 
 
