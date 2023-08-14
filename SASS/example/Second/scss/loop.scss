@@ -1,5 +1,40 @@
+$color : (
+    1 : red,
+    2 : blue,
+    3 : green,
+    4 : yellow,
+    5 : gray
+);
+
+$eachColor : red green blue gray yellow;
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+p {
+    font-size: 30px;
+    padding: 15px;
+}
+
+@for $i from 1 through 5{
+    .paragh#{$i} {
+        background-color: map-get($map: $color, $key: $i) ;
+    }
+}
+
+@each $color in $eachColor {
+    .paragh-#{$color} {
+        @if ($color == green) {
+            background-color: purple;
+        }@else {
+            background-color: $color;
+        }
+    }
+}
+
+
+
+
+
