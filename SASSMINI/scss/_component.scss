@@ -26,3 +26,24 @@
     text-align: center;
     @include textStyle;
 }
+.main-heading {
+    font-family: $font-dancingScript;
+    font-size: 90px;
+    font-weight: 300;
+    color: $color-primary;
+}
+.sub-heading {
+    font-family: $font-josefinSans ;
+    font-size: 50px;
+    font-weight: 300;
+    color: $color-secodary;
+}
+.main-btn:hover {
+    background-color: $color-primary !important;
+    color: $color-dark !important;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+}
