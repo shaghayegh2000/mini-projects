@@ -2,6 +2,7 @@ $color-dark : #262626;
 $color-black : #0000;
 $color-primary : #d3ab55;
 $color-secodary : #bbb;
+$color-white : #fff;
 
 $font-dancingScript : "Dancing Script" , cursive ;
 $font-josefinSans : "Josefin Sans" , fans-serif ;
@@ -26,6 +27,11 @@ $font-nonito : "nonito" , fans-serif ;
     -moz-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
+}
+
+%fulspace {
+    width: 100%;
+    height: 100%;
 }
 
 * {

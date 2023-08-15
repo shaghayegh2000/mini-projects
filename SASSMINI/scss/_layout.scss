@@ -27,6 +27,7 @@
 
     .about-left {
         width: 40%;
+
         img {
             width: 100%;
             opacity: .7;
@@ -51,13 +52,21 @@
         }
 
         .description {
+            text-indent: 30px;
             font-family: $font-nonito;
             font-size: 20px;
             color: $color-secodary;
             text-align: justify;
-            
+
         }
     }
 }
 
-
+.gallery {
+    .cards-wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+}

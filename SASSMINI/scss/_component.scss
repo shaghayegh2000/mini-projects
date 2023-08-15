@@ -47,3 +47,24 @@
     -ms-transition: all .5s;
     -o-transition: all .5s;
 }
+
+.card {
+    position: relative !important;
+    height: 25vw !important;
+    width: 31.5% !important;
+
+    .card-img-overlay {
+        @extend %fulspace;
+        @include flex;
+        flex-direction: column;
+        position: absolute !important;
+        color: $color-dark !important;
+        z-index: 100;
+    }
+
+    .card-img {
+        @extend %fulspace;
+        object-fit: cover;
+        opacity: .6;
+    }
+}

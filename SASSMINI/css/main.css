@@ -1,3 +1,8 @@
+.card .card-img, .card .card-img-overlay {
+  width: 100%;
+  height: 100%;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -69,6 +74,25 @@ body {
   -o-transition: all 0.5s;
 }
 
+.card {
+  position: relative !important;
+  height: 25vw !important;
+  width: 31.5% !important;
+}
+.card .card-img-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute !important;
+  color: #262626 !important;
+  z-index: 100;
+}
+.card .card-img {
+  object-fit: cover;
+  opacity: 0.6;
+}
+
 .header {
   width: 100%;
   height: 100vh;
@@ -131,8 +155,16 @@ body {
   margin: 0 5px;
 }
 .about-us .about-right .description {
+  text-indent: 30px;
   font-family: "nonito", fans-serif;
   font-size: 20px;
   color: #bbb;
   text-align: justify;
+}
+
+.gallery .cards-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }/*# sourceMappingURL=main.css.map */
