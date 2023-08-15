@@ -1,0 +1,28 @@
+.logo {
+    font-size: 70px;
+    color: $color-primary;
+    width: 100px;
+    height: 100px;
+    margin-right: 25px;
+    border: 3px solid $color-primary;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    @include flex;
+}
+.main-name {
+    font-family: $font-nonito;
+    font-size: 50px;
+    margin-top: 20px;
+    color: $color-secodary;
+    @include textStyle;
+}
+.sub-name {
+    font-family: $font-josefinSans;
+    font-size: 18px;
+    color: $color-secodary;
+    text-align: center;
+    @include textStyle;
+}
