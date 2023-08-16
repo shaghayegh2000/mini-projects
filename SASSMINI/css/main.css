@@ -19,6 +19,7 @@ body {
   position: fixed;
   right: 3%;
   top: 10%;
+  z-index: 400;
 }
 .ham-menu .Menu {
   display: flex;
@@ -146,6 +147,15 @@ body {
   opacity: 0.8;
 }
 
+@media screen and (max-width: 1200px) {
+  .about-right {
+    margin: 200px 0 150px 0;
+    overflow: hidden;
+  }
+  .about-right .main-heading {
+    font-size: 60px;
+  }
+}
 .Navbar {
   position: relative !important;
   z-index: 200 !important;
@@ -159,6 +169,7 @@ body {
   background-color: #262626;
   position: fixed;
   left: -50vw;
+  opacity: 0.9;
 }
 .Navbar-navigation .navig-left .left-img {
   width: 50%;
@@ -187,6 +198,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0.9;
 }
 .Navbar-navigation .navig-right .nav-list .navList-item {
   list-style-type: none;
@@ -209,6 +221,37 @@ body {
   -ms-transition: all 0.5s;
   -o-transition: all 0.5s;
   letter-spacing: 4px;
+}
+
+.checkbox:checked ~ .Navbar-navigation .navig-left {
+  left: 0;
+  transition: left 1.5s;
+  -webkit-transition: left 1.5s;
+  -moz-transition: left 1.5s;
+  -ms-transition: left 1.5s;
+  -o-transition: left 1.5s;
+}
+
+.checkbox:checked ~ .Navbar-navigation .navig-right {
+  right: 0;
+  transition: right 1.5s;
+  -webkit-transition: right 1.5s;
+  -moz-transition: right 1.5s;
+  -ms-transition: right 1.5s;
+  -o-transition: right 1.5s;
+}
+
+.checkbox:checked ~ .ham-menu .Menu {
+  transform: rotateZ(90deg);
+  -webkit-transform: rotateZ(90deg);
+  -moz-transform: rotateZ(90deg);
+  -ms-transform: rotateZ(90deg);
+  -o-transform: rotateZ(90deg);
+  transition: transform 1s;
+  -webkit-transition: transform 1s;
+  -moz-transition: transform 1s;
+  -ms-transition: transform 1s;
+  -o-transition: transform 1s;
 }
 
 .header {

@@ -2,6 +2,7 @@
     position: relative !important;
     z-index: 200 !important;
 
+
     &-navigation {
         display: flex;
 
@@ -11,6 +12,7 @@
             background-color: $color-dark;
             position: fixed;
             left: -50vw;
+            opacity: .9;
 
             .left-img {
                 width: 50%;
@@ -44,6 +46,7 @@
             position: fixed;
             right: -50vw;
             @include flex;
+            opacity: .9;
 
             .nav-list{
                 .navList-item{
@@ -71,6 +74,37 @@
             }
         }
     }
+}
+
+.checkbox:checked ~ .Navbar-navigation .navig-left {
+    left: 0;
+    transition: left 1.5s;
+    -webkit-transition: left 1.5s;
+    -moz-transition: left 1.5s;
+    -ms-transition: left 1.5s;
+    -o-transition: left 1.5s;
+}
+
+.checkbox:checked ~ .Navbar-navigation .navig-right {
+    right: 0;
+    transition: right 1.5s;
+    -webkit-transition: right 1.5s;
+    -moz-transition: right 1.5s;
+    -ms-transition: right 1.5s;
+    -o-transition: right 1.5s;
+}
+
+.checkbox:checked ~ .ham-menu .Menu {
+    transform: rotateZ(90deg);
+    -webkit-transform: rotateZ(90deg);
+    -moz-transform: rotateZ(90deg);
+    -ms-transform: rotateZ(90deg);
+    -o-transform: rotateZ(90deg);
+    transition: transform 1s;
+    -webkit-transition: transform 1s;
+    -moz-transition: transform 1s;
+    -ms-transition: transform 1s;
+    -o-transition: transform 1s;
 }
 
 .header {
