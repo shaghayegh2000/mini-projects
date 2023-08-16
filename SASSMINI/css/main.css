@@ -1,4 +1,4 @@
-.card .card-img, .card .card-img-overlay {
+.card .card-img, .card .card-img-overlay, .ham-menu .Menu {
   width: 100%;
   height: 100%;
 }
@@ -11,6 +11,30 @@
 
 body {
   background-color: #262626 !important;
+}
+
+.ham-menu {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  right: 3%;
+  top: 10%;
+}
+.ham-menu .Menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  cursor: pointer;
+}
+.ham-menu .Menu .menu-line {
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: rgb(211, 171, 85);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
 }
 
 .logo {
@@ -120,6 +144,71 @@ body {
 .card .card-img {
   object-fit: cover;
   opacity: 0.8;
+}
+
+.Navbar {
+  position: relative !important;
+  z-index: 200 !important;
+}
+.Navbar-navigation {
+  display: flex;
+}
+.Navbar-navigation .navig-left {
+  width: 50vw;
+  height: 100vh;
+  background-color: #262626;
+  position: fixed;
+  left: -50vw;
+}
+.Navbar-navigation .navig-left .left-img {
+  width: 50%;
+  position: absolute;
+  box-shadow: 30px 30px 20px black;
+  opacity: 0.7;
+}
+.Navbar-navigation .navig-left .img1 {
+  top: 5%;
+  left: 15%;
+}
+.Navbar-navigation .navig-left .img2 {
+  top: 25%;
+  left: 25%;
+}
+.Navbar-navigation .navig-left .img3 {
+  top: 45%;
+  left: 35%;
+}
+.Navbar-navigation .navig-right {
+  width: 50vw;
+  height: 100vh;
+  background-color: #1f1d1d;
+  position: fixed;
+  right: -50vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Navbar-navigation .navig-right .nav-list .navList-item {
+  list-style-type: none;
+}
+.Navbar-navigation .navig-right .nav-list .navList-link {
+  font-family: "nonito", fans-serif;
+  font-size: 40px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  color: #bbb;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+.Navbar-navigation .navig-right .nav-list .navList-link:hover {
+  color: rgb(211, 171, 85);
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  letter-spacing: 4px;
 }
 
 .header {

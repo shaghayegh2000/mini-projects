@@ -1,3 +1,78 @@
+.Navbar {
+    position: relative !important;
+    z-index: 200 !important;
+
+    &-navigation {
+        display: flex;
+
+        .navig-left {
+            width: 50vw;
+            height: 100vh;
+            background-color: $color-dark;
+            position: fixed;
+            left: -50vw;
+
+            .left-img {
+                width: 50%;
+                position: absolute;
+                box-shadow: 30px 30px 20px black;
+
+                opacity: .7;
+
+            }
+
+            .img1 {
+                top: 5%;
+                left: 15%;
+            }
+
+            .img2 {
+                top: 25%;
+                left: 25%;
+            }
+
+            .img3 {
+                top: 45%;
+                left: 35%;
+            }
+        }
+
+        .navig-right {
+            width: 50vw;
+            height: 100vh;
+            background-color: #1f1d1d;
+            position: fixed;
+            right: -50vw;
+            @include flex;
+
+            .nav-list{
+                .navList-item{
+                    list-style-type: none;
+                }
+                .navList-link {
+                    font-family: $font-nonito;
+                    font-size: 40px;
+                    @include textStyle;
+                    color: $color-secodary;
+                    text-decoration: none;
+                    display: block;
+                    text-align: center;
+
+                    &:hover {
+                        color: $color-primary;
+                        transition: all .5s;
+                        -webkit-transition: all .5s;
+                        -moz-transition: all .5s;
+                        -ms-transition: all .5s;
+                        -o-transition: all .5s;
+                        letter-spacing: 4px;
+}
+                }
+            }
+        }
+    }
+}
+
 .header {
     width: 100%;
     height: 100vh;
@@ -106,6 +181,7 @@
 
     }
 }
+
 .copywrite {
     .copyrwrite-para {
         font-family: $font-josefinSans !important;

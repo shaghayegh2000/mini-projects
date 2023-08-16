@@ -1,3 +1,30 @@
+.ham-menu {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    right: 3%;
+    top: 10%;
+
+    .Menu {
+        @extend %fulspace;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        cursor: pointer;
+
+        .menu-line {
+            width: 100%;
+            height: 4px;
+            border-radius: 4px;
+            background-color: $color-primary;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            -ms-border-radius: 4px;
+            -o-border-radius: 4px;
+}
+    }
+}
+
 .logo {
     font-size: 70px;
     color: $color-primary;
