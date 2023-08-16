@@ -12,6 +12,7 @@
     -o-border-radius: 50%;
     @include flex;
 }
+
 .main-name {
     font-family: $font-nonito;
     font-size: 50px;
@@ -19,6 +20,7 @@
     color: $color-secodary;
     @include textStyle;
 }
+
 .sub-name {
     font-family: $font-josefinSans;
     font-size: 18px;
@@ -26,18 +28,21 @@
     text-align: center;
     @include textStyle;
 }
+
 .main-heading {
     font-family: $font-dancingScript;
     font-size: 90px;
     font-weight: 300;
     color: $color-primary;
 }
+
 .sub-heading {
-    font-family: $font-josefinSans ;
+    font-family: $font-josefinSans;
     font-size: 50px;
     font-weight: 300;
     color: $color-secodary;
 }
+
 .main-btn:hover {
     background-color: $color-primary !important;
     color: $color-dark !important;
@@ -52,6 +57,12 @@
     position: relative !important;
     height: 25vw !important;
     width: 31.5% !important;
+    overflow: hidden;
+
+    &:hover .card-img-overlay {
+        top: 0;
+        background-color: rgba(211, 171, 85 , .5);;
+    }
 
     .card-img-overlay {
         @extend %fulspace;
@@ -60,11 +71,39 @@
         position: absolute !important;
         color: $color-dark !important;
         z-index: 100;
+        top: -100%;
+                transition: 1s;
+        -webkit-transition: 1s;
+        -moz-transition: 1s;
+        -ms-transition: 1s;
+        -o-transition: 1s;
     }
+
+    &-heading {
+        font-family: $font-dancingScript;
+        font-weight: 300;
+        @include textStyle;
+    }
+
+    &-para {
+        font-family: $font-nonito;
+        font-size: 30px;
+        @include textStyle;
+    }
+
+    &-btn {
+        width: 150px;
+        height: 45px;
+        font-family: $font-josefinSans;
+        color: $color-primary !important;
+        font-weight: 500 !important;
+        border: 2px solid $color-primary !important;
+    }
+
 
     .card-img {
         @extend %fulspace;
         object-fit: cover;
-        opacity: .6;
+        opacity: .8;
     }
 }

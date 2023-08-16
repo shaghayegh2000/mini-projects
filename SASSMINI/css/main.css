@@ -15,11 +15,11 @@ body {
 
 .logo {
   font-size: 70px;
-  color: #d3ab55;
+  color: rgb(211, 171, 85);
   width: 100px;
   height: 100px;
   margin-right: 25px;
-  border: 3px solid #d3ab55;
+  border: 3px solid rgb(211, 171, 85);
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -37,7 +37,6 @@ body {
   color: #bbb;
   font-weight: 300;
   letter-spacing: 2px;
-  text-transform: uppercase;
 }
 
 .sub-name {
@@ -47,14 +46,13 @@ body {
   text-align: center;
   font-weight: 300;
   letter-spacing: 2px;
-  text-transform: uppercase;
 }
 
 .main-heading {
   font-family: "Dancing Script", cursive;
   font-size: 90px;
   font-weight: 300;
-  color: #d3ab55;
+  color: rgb(211, 171, 85);
 }
 
 .sub-heading {
@@ -65,7 +63,7 @@ body {
 }
 
 .main-btn:hover {
-  background-color: #d3ab55 !important;
+  background-color: rgb(211, 171, 85) !important;
   color: #262626 !important;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
@@ -78,6 +76,11 @@ body {
   position: relative !important;
   height: 25vw !important;
   width: 31.5% !important;
+  overflow: hidden;
+}
+.card:hover .card-img-overlay {
+  top: 0;
+  background-color: rgba(211, 171, 85, 0.5);
 }
 .card .card-img-overlay {
   display: flex;
@@ -87,10 +90,36 @@ body {
   position: absolute !important;
   color: #262626 !important;
   z-index: 100;
+  top: -100%;
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+}
+.card-heading {
+  font-family: "Dancing Script", cursive;
+  font-weight: 300;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+.card-para {
+  font-family: "nonito", fans-serif;
+  font-size: 30px;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+.card-btn {
+  width: 150px;
+  height: 45px;
+  font-family: "Josefin Sans", fans-serif;
+  color: rgb(211, 171, 85) !important;
+  font-weight: 500 !important;
+  border: 2px solid rgb(211, 171, 85) !important;
 }
 .card .card-img {
   object-fit: cover;
-  opacity: 0.6;
+  opacity: 0.8;
 }
 
 .header {
@@ -151,7 +180,7 @@ body {
 }
 .about-us .about-right .stars .star {
   font-size: 15px;
-  color: #d3ab55;
+  color: rgb(211, 171, 85);
   margin: 0 5px;
 }
 .about-us .about-right .description {

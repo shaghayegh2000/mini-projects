@@ -1,8 +1,9 @@
 $color-dark : #262626;
 $color-black : #0000;
-$color-primary : #d3ab55;
+$color-primary : rgb(211, 171, 85);
 $color-secodary : #bbb;
 $color-white : #fff;
+// $color-opacity : rgba(255, 255, 255 , .4);
 
 $font-dancingScript : "Dancing Script" , cursive ;
 $font-josefinSans : "Josefin Sans" , fans-serif ;
@@ -16,7 +17,6 @@ $font-nonito : "nonito" , fans-serif ;
 @mixin textStyle {
     font-weight: 300;
     letter-spacing: 2px;
-    text-transform: uppercase;
 }
 @mixin centering($top) {
     position: absolute;
