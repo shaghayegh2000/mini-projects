@@ -52,6 +52,8 @@ html {
     top: 2.5rem;
     right: 4rem;
     cursor: pointer;
+    animation: searchiconAnim2 1s forwards;
+    -webkit-animation: searchiconAnim2 1s forwards;
 }
 .search-icon i {
     color: #999;
@@ -77,5 +79,13 @@ html {
     100% {
         top: 2.5rem;
         right: calc(50% + 16rem);
+    }
+}
+@keyframes searchiconAnim2 {
+    0% {
+        right: calc(50% + 16rem);
+    }
+    100% {
+        right: 3rem;
     }
 }
