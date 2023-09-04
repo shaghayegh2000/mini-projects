@@ -15,28 +15,48 @@ body {
   place-items: center;
 }
 .navbar {
-  width: 77rem;
+  width: 81rem;
   height: 10rem;
-  background-color: #ccc;
   display: flex;
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
 }
 .nav-link {
   background-color: rgb(222, 233, 181);
-  width: 11rem;
+  width: 9rem;
   height: 10rem;
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
   position: relative;
+}
+.nav-link:first-child {
+  width: 5rem;
+  border-radius: 1rem 0 0 1rem;
+  -webkit-border-radius: 1rem 0 0 1rem;
+  -moz-border-radius: 1rem 0 0 1rem;
+  -ms-border-radius: 1rem 0 0 1rem;
+  -o-border-radius: 1rem 0 0 1rem;
+}
+.nav-link:last-child {
+  width: 5rem;
+  border-radius: 0 1rem 1rem 0;
+  -webkit-border-radius: 0 1rem 1rem 0;
+  -moz-border-radius: 0 1rem 1rem 0;
+  -ms-border-radius: 0 1rem 1rem 0;
+  -o-border-radius: 0 1rem 1rem 0;
 }
 .nav-link::before {
   content: "";
   cursor: default;
   pointer-events: none;
-  width: 11rem;
+  width: 9rem;
   height: 8rem;
-  background-color: red;
+  background-color: rgb(191, 248, 226);
   position: absolute;
   top: -100%;
   left: 0;
@@ -46,6 +66,13 @@ body {
   -ms-border-radius: 0 0 5rem 5rem;
   -o-border-radius: 0 0 5rem 5rem;
 }
+.nav-link.prevElChange {
+  border-top-right-radius: 1rem;
+}
+.nav-link.nexElChange {
+  border-top-left-radius: 1rem;
+}
+
 .nav-link.change::before {
   top: -30%;
 }
@@ -53,6 +80,14 @@ body {
   font-size: 2.5rem;
   color: #333;
 }
+.change.nav-link {
+  background-color: rgb(185, 197, 147);
+}
+.change.nav-link i {
+  color: #fff;
+  font-size: 3.5rem;
+}
+
 
 @media only screen and (max-width:900px) {
   .navbar {
@@ -60,15 +95,19 @@ body {
     height: 8rem;
   }
   .nav-link {
-    width: 9rem;
+    width: 7rem;
   }
   .nav-link::before {
     content: "";
-    width: 9rem;
+    width: 7rem;
     height: 7rem;
   }
   .nav-link.change::before {
     top: -25%;
+  }
+  .change.nav-link i {
+    color: #fff;
+    font-size: 3rem;
   }
 }
 

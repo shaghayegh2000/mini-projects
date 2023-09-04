@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+html {
+    font-size: 62.5%;
+}
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: #262626;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn {
+    position: absolute;
+    width: 20rem;
+    height: 20rem;
+    background-color: #9b0e0e;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: .2rem dotted #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    overflow: hidden;
+}
+.btn span{
+    position: relative;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+}
+
+.ripple {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #e7be08;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transform: translate(-50% , -50%);
+    -webkit-transform: translate(-50% , -50%);
+    -moz-transform: translate(-50% , -50%);
+    -ms-transform: translate(-50% , -50%);
+    -o-transform: translate(-50% , -50%);
+    animation: ropple .7s forwards;
+    -webkit-animation: ropple .7s forwards;
+}
+.ripple2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #e7be08;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transform: translate(-50% , -50%);
+    -webkit-transform: translate(-50% , -50%);
+    -moz-transform: translate(-50% , -50%);
+    -ms-transform: translate(-50% , -50%);
+    -o-transform: translate(-50% , -50%);
+    animation: ropple2 .5s forwards;
+    -webkit-animation: ropple2 .5s forwards;
+}
+
+@keyframes ropple {
+    0% {
+        width: 0;
+        height: 0;
+    }
+    100% {
+        width: 210%;
+        height: 210%;
+    }
+}
+@keyframes ropple2 {
+    0% {
+        width: 210%;
+        height: 210%;
+    }
+    100% {
+        width: 0;
+        height: 0;
+    }
+}
