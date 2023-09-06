@@ -9,13 +9,15 @@ html {
 }
 .container {
     width: 100%;
-    height: 100vh;
+    height: 150vh;
+    position: relative;
     background-color: #262626;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
 }
 .btn {
+    margin-top: 5rem;
     position: absolute;
     width: 20rem;
     height: 20rem;
@@ -97,4 +99,78 @@ html {
         width: 0;
         height: 0;
     }
+}
+
+
+
+
+.progressBar {
+    width: 30rem;
+    height: 30rem;
+    background-color: white;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    position: absolute;
+    top: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.halfCir , .halfCirTop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+}
+.halfCir:nth-child(1){
+    background-color: green;
+}
+.halfCir:nth-child(2){
+    background-color: blue;
+}
+.halfCirTop {
+    background-color: orange;
+}
+.progressBar:hover .halfCir:nth-child(1) {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transition: transform 1s linear;
+    -webkit-transition: transform 1s linear;
+    -moz-transition: transform 1s linear;
+    -ms-transition: transform 1s linear;
+    -o-transition: transform 1s linear;
+}
+.progressBar:hover .halfCir:nth-child(2) {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transition: transform 2s linear;
+    -webkit-transition: transform 2s linear;
+    -moz-transition: transform 2s linear;
+    -ms-transition: transform 2s linear;
+    -o-transition: transform 2s linear;
+}
+.progressBarCir {
+    width: 29.5rem;
+    height: 29.5rem;
+    background-color: #000;
+    border-radius: 50%;
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    -ms-border-radius:;
+    -o-border-radius:;
+    font-size: 4rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
