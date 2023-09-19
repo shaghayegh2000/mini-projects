@@ -6,20 +6,21 @@
 
 html {
   font-size: 62.5%;
+  background-color: #262626;
 }
 
 .wrapper {
-  width: 100%;
+  width: 60%;
   height: 100vh;
-  background-color: #262626;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: auto;
 }
-/* 
+
 .follow,
 .menu-link {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 600;
   color: #fff;
   text-transform: uppercase;
@@ -43,7 +44,7 @@ html {
 }
 
 .line {
-  width: 10rem;
+  width: 7rem;
   height: 0.1rem;
   margin-right: 5rem;
   position: relative;
@@ -118,4 +119,40 @@ html {
 
 .menu-link:nth-child(5):hover {
   background-color: #cd201f;
-} */
+}
+
+
+
+@media screen and (max-width : 800px) {
+  html {
+    font-size: 45%;
+  }
+
+  /* .wrapper {
+    width: 100%;
+    height: 100vh;
+    background-color: #262626;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .follow,
+  .menu-link {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin-right: 4rem;
+  }*/
+  
+   .follow {
+    pointer-events: auto;
+    margin: 0 auto 3rem 1rem;
+  } 
+  
+  .menu {
+    flex-direction: column;
+  }
+}
