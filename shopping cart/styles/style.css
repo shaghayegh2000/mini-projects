@@ -23,7 +23,7 @@ body {
     align-items: center;
     background-color: #212529;
     color: white;
-    height: 120px;
+    height: 100px;
     padding: 0 60px;
 }
 
@@ -36,10 +36,10 @@ body {
     position: relative;
     background-color: #fff;
     color: #212529;
-    font-size: 30px;
-    padding: 5px 10px;
+    font-size: 25px;
+    padding: 3px 10px;
     border-radius: 4px;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .cart i {
@@ -48,13 +48,17 @@ body {
 
 .cartAmount {
     position: absolute;
-    top: -15px;
+    top: -20px;
     right: -10px;
     font-size: 16px;
     background-color: red;
     color: white;
-    padding: 3px;
+    padding: 3px 5px;
     border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
 }
 
 .shop {
@@ -82,6 +86,7 @@ body {
     flex-direction: column;
     padding: 10px;
     gap: 12px;
+    text-align: justify;
 }
 
 .price {
@@ -97,4 +102,28 @@ body {
     align-items: center;
     gap: 10px;
     font-size: 16px;
+}
+
+.fa-minus {
+    color: #ff0000;
+    cursor: pointer;
+}
+
+.fa-plus {
+    color: #008000;
+    cursor: pointer;
+}
+
+
+
+@media (max-width: 800px) {
+    .shop {
+      grid-template-columns: repeat(auto-fill, 45%);
+    }
+}
+
+@media (max-width: 500px) {
+    .shop {
+      grid-template-columns: repeat(auto-fill, 70%);
+    }
 }
