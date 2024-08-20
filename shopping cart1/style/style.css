@@ -1,0 +1,118 @@
+@font-face {
+    font-family: 'vazir';
+    src: url('../vazir-font-v16.1.0/Vazir.eot');
+    src: url('../vazir-font-v16.1.0/Vazir.ttf');
+    src: url('../vazir-font-v16.1.0/Vazir.woff');
+    src: url('../vazir-font-v16.1.0/Vazir.woff2');
+}
+
+body{
+    font-family: 'vazir';
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+
+    .cartTab{
+        width: 400px;
+        background: #353432;
+        color: #eee;
+        bottom: 0;
+        height: 100vh;
+        display: grid;
+        /* transform: translateX(400px);
+        display: none; */
+        grid-template-rows: 70px 1fr 70px;
+        transition: .5s;
+        position: relative;
+
+        .btn {
+            position: absolute;
+            bottom: 0;
+        }
+    }
+}
+
+.container {
+    width: 75%;
+    position: relative;
+    padding: 0 120px;
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        height: 70px;
+        align-items: center;
+
+        .title {
+            font-size: 20px;
+        }
+
+        .icon-cart {
+            position: relative;
+
+            svg {
+                width: 30px;
+            }
+
+            span {
+                position: absolute;
+                background: #ff0000;
+                bottom: -7px;
+                right: -15px;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -o-border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #ffff;
+            }
+        }
+    }
+
+    .listProduct {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 220px);
+        justify-content: center;
+        gap: 15px;
+
+        .item {
+            padding: 20px 10px;
+            background-color: #EEEEE6;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            img {
+                width: 80%;
+                filter: drop-shadow(0 50px 20px #0009);
+            }
+
+            h2 {
+                font-size: 17px;
+            }
+
+            .price {
+                letter-spacing: 7px;
+            }
+
+            .addToCart {
+                background: #000;
+                color: #ffff;
+                padding: 5px 20px;
+                margin-top: 15px;
+                font-size: 14px;
+                border-radius: 20px;
+                -webkit-border-radius: 20px;
+                -moz-border-radius: 20px;
+                -ms-border-radius: 20px;
+                -o-border-radius: 20px;
+            }
+        }
+    }
+}
